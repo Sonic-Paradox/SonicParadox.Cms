@@ -350,3 +350,4 @@ MigrationBackup/
 
 **/wwwroot/uploads/*
 *.db
+SonicParadox.Cms/wwwroot/assets/css/style.min.css

@@ -1,8 +1,4 @@
-@import "inc/general";
-@import "inc/type";
-@import "inc/buttons";
-@import "inc/cards";
-@import "inc/navbar";
-@import "inc/header";
-@import "inc/blocks";
-@import "inc/posts";
+@import "inc/piranha-blocks";
+
+@import "theme/bootstrap";
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
