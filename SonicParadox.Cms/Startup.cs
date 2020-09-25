@@ -9,6 +9,7 @@ using Piranha.AttributeBuilder;
 using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.Data.EF.SQLite;
 using Piranha.Manager.Editor;
+using SonicParadox.Blocks.Staff;
 
 namespace SonicParadox.Cms
 {
@@ -77,11 +78,14 @@ namespace SonicParadox.Cms
             EditorConfig.FromFile("editorconfig.json");
 
             // Middleware setup
-            app.UsePiranha(options => {
+            app.UsePiranha(options =>
+            {
                 options.UseManager();
                 options.UseTinyMCE();
                 options.UseIdentity();
             });
+
+            App.Blocks.AddStaffBlocks();
         }
     }
 }

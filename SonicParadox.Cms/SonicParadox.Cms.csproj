@@ -16,4 +16,8 @@
     <PackageReference Include="Piranha.Manager.TinyMCE" Version="8.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SonicParadox.Blocks.Staff\SonicParadox.Blocks.Staff.csproj" />
+  </ItemGroup>
+
 </Project>
