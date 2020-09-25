@@ -1,0 +1,14 @@
+﻿@model StaffGroupBlock
+@using SonicParadox.Blocks.Staff;
+@{
+}
+
+<div class="staff-group">
+    <h2 class="staff-group__label">@Model.Label</h2>
+    <div class="staf-group__list">
+        @foreach (var staff in Model.Items.Cast<StaffBlock>())
+        {
+            <partial name="DisplayTemplates/StaffBlock" model="@staff" />
+        }
+    </div>
+</div>

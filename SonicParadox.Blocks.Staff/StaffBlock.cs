@@ -16,6 +16,9 @@ namespace SonicParadox.Blocks.Staff
         [Field(Title = "Accent Color")]
         public StringField AccentColor { get; set; }
 
+        [Field(Title = "BackgroundColor")]
+        public StringField BackgroundColor { get; set; }
+
         public override string GetTitle() => DisplayName;
     }
 }
