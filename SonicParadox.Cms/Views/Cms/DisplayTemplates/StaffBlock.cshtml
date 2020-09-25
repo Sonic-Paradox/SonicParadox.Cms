@@ -14,7 +14,7 @@
 }
 
 <div class="staff" data-staff-id="@Model.Id" id="@Model.Id" @Html.Raw(styleAttrib)>
-    <img class="staff__avatar" href="@Model.Avatar?.Media?.PublicUrl" alt="@Model.Avatar?.Media?.AltText" />
+    <img class="staff__avatar" src="@Url.Content(Model.Avatar?.Media?.PublicUrl)" alt="@Model.Avatar?.Media?.AltText" />
     <span class="staff__title">@Model.DisplayName</span>
     <div class="staff__dimmer" data-staff-id="@Model.Id">
         <div class="staff__biography">
