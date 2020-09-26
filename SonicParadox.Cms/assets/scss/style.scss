@@ -3,3 +3,7 @@
 
 @import "theme/bootstrap";
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+    box-sizing: border-box;
+}
