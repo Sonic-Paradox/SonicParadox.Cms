@@ -11,25 +11,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="~/">Sonic Paradox</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="scroll-trigger">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" data-class="scrolled" data-class-condition="this.isScrolled()">
+            <div class="container">
+                <a class="navbar-brand sr-only" href="~/">Sonic Paradox</a>
+                <a class="sp-logo-collapsible" href="~/" data-class="collapsed" data-class-condition="this.isScrolled()">
+                    <img class="sp-logo__top" src="~/assets/img/splogo-top.svg" />
+                    <img class="sp-logo__bottom" src="~/assets/img/splogo-bottom.svg" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    @foreach (var item in WebApp.Site.Sitemap.Where(i => !i.IsHidden))
-                    {
-                        <li class="nav-item@(item.Id == WebApp.PageId || item.HasChild(WebApp.PageId) ? " active" : "")">
-                            <a class="nav-link" href="@WebApp.Url(item)">@item.MenuTitle</a>
-                        </li>
-                    }
-                </ul>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        @foreach (var item in WebApp.Site.Sitemap.Where(i => !i.IsHidden))
+                        {
+            <li class="nav-item@(item.Id == WebApp.PageId || item.HasChild(WebApp.PageId) ? " active" : "")">
+                <a class="nav-link" href="@WebApp.Url(item)">@item.MenuTitle</a>
+            </li>
+}
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     @RenderBody()
     <script type="text/javascript" src="https://unpkg.com/gravy-bind/dist.browser/index.js"></script>

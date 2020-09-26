@@ -1,0 +1,40 @@
+.sp-logo-collapsible {
+    width: 86px;
+    position: relative;
+    height: 32px;
+
+    & > .sp-logo__top,
+    & > .sp-logo__bottom {
+        position: absolute;
+        transition: all 0.3s ease;
+        overflow-x: hidden;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    & > .sp-logo__top {
+        top: 0;
+        height: 17.94px;
+        transform-origin: top left;
+    }
+
+    & > .sp-logo__bottom {
+        bottom: 0;
+        height: 10.77px;
+        transform-origin: bottom left;
+    }
+
+    &.collapsed {
+        & > .sp-logo__top {
+            top: 0;
+            max-width: 15px;
+            transform: scale(1.1);
+        }
+
+        & > .sp-logo__bottom {
+            bottom: 0;
+            max-width: 10.3px;
+            transform: scale(1.8) translateX(7px);
+        }
+    }
+}

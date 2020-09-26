@@ -2,4 +2,9 @@
 @import "./node_modules/bootstrap/scss/variables";
 @import "./node_modules/bootstrap/scss/mixins";
 
-//$body-bg: red;
+@import "../sp-custom/variables/colors";
+
+$theme-colors: (
+    "primary": $sp-primary,
+    "danger": #ff4136,
+);

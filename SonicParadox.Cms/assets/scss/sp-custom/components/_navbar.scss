@@ -1,0 +1,10 @@
+@import "../variables/colors";
+
+.navbar {
+    transition: background-color 0.3s ease;
+    background-color: $sp-primary;
+
+    &.scrolled {
+        background-color: transparentize($sp-primary, 0.04);
+    }
+}

@@ -13,6 +13,7 @@ $staff-spacing: 12px;
     box-shadow: transparentize(black, 0.7) 0 2px 12px;
     color: var(--color);
     background-color: var(--background-color);
+    cursor: pointer;
 
     & > .staff__avatar {
         width: $target-width;
@@ -59,6 +60,7 @@ $staff-spacing: 12px;
             position: relative;
             overflow: hidden;
             transition: opacity 0.4s ease, transform 0.4s ease;
+            cursor: initial;
 
             &:first-child:after {
                 content: "";
