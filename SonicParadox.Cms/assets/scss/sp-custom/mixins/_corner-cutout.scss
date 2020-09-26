@@ -1,0 +1,11 @@
+@mixin corner-cutout($size, $color) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $size $size 0;
+    border-color: transparent $color transparent transparent;
+}

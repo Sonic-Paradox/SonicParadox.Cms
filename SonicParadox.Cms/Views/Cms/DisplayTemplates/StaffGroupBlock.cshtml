@@ -5,7 +5,7 @@
 
 <div class="staff-group">
     <h2 class="staff-group__label">@Model.Label</h2>
-    <div class="staf-group__list">
+    <div class="staff-group__list">
         @foreach (var staff in Model.Items.Cast<StaffBlock>())
         {
             <partial name="DisplayTemplates/StaffBlock" model="@staff" />
