@@ -17,7 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SonicParadox.Blocks.Staff\SonicParadox.Blocks.Staff.csproj" />
+    <ProjectReference Include="..\Blocks\SonicParadox.Blocks.Creations\SonicParadox.Blocks.Creations.csproj" />
+    <ProjectReference Include="..\Blocks\SonicParadox.Blocks.Staff\SonicParadox.Blocks.Staff.csproj" />
   </ItemGroup>
 
 </Project>

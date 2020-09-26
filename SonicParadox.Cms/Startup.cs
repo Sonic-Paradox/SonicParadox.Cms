@@ -10,6 +10,7 @@ using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.Data.EF.SQLite;
 using Piranha.Manager.Editor;
 using SonicParadox.Blocks.Staff;
+using SonicParadox.Blocks.Creations;
 
 namespace SonicParadox.Cms
 {
@@ -63,7 +64,7 @@ namespace SonicParadox.Cms
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }            
+            }
 
             // Initialize Piranha
             App.Init(api);
@@ -71,8 +72,8 @@ namespace SonicParadox.Cms
             // Build content types
             new ContentTypeBuilder(api)
                 .AddAssembly(typeof(Startup).Assembly)
-                .Build();
-                //.DeleteOrphans();
+                .Build()
+                .DeleteOrphans();
 
             // Configure Tiny MCE
             EditorConfig.FromFile("editorconfig.json");
@@ -86,6 +87,7 @@ namespace SonicParadox.Cms
             });
 
             App.Blocks.AddStaffBlocks();
+            App.Blocks.AddCreationBlocks();
         }
     }
 }
