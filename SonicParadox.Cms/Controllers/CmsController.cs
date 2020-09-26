@@ -71,6 +71,21 @@ namespace SonicParadox.Cms.Controllers
             }
         }
 
+        [Route("page/wide")]
+        public async Task<IActionResult> WidePage(Guid id, bool draft = false)
+        {
+            try
+            {
+                var model = await _loader.GetPageAsync<StandardPage>(id, HttpContext.User, draft);
+
+                return View("WidePage", model);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized();
+            }
+        }
+
         /// <summary>
         /// Gets the post with the given id.
         /// </summary>

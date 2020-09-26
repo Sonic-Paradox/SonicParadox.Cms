@@ -63,7 +63,7 @@ namespace SonicParadox.Cms
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
+            }            
 
             // Initialize Piranha
             App.Init(api);
@@ -71,8 +71,8 @@ namespace SonicParadox.Cms
             // Build content types
             new ContentTypeBuilder(api)
                 .AddAssembly(typeof(Startup).Assembly)
-                .Build()
-                .DeleteOrphans();
+                .Build();
+                //.DeleteOrphans();
 
             // Configure Tiny MCE
             EditorConfig.FromFile("editorconfig.json");

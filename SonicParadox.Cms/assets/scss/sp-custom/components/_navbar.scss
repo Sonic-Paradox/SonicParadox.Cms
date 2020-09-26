@@ -7,4 +7,12 @@
     &.scrolled {
         background-color: transparentize($sp-primary, 0.04);
     }
+
+    .nav-item.active {
+        color: white;
+        
+        & > .nav-link {
+            color: white;
+        }
+    }
 }

@@ -1,0 +1,14 @@
+﻿@model StandardPage
+@{ ViewData["Title"] = !string.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Title; }
+@section head {
+    @WebApp.MetaTags(Model)
+}
+
+<main class="featured">
+    @foreach (var block in Model.Blocks)
+    {
+        <div class="block @block.CssName()">
+            @Html.DisplayFor(m => block, block.GetType().Name)
+        </div>
+    }
+</main>
